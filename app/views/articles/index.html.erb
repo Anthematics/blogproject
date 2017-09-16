@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Welcome to my Blog</title>
+  </head>
+  <body>
+ <h1> Listing articles </h1>
+
+   <table>
+     <tr>
+       <th> Title </th>
+       <th>  Text </th>
+       <th> Written at:</th>
+     </tr>
+     <%@articles.each do |article|%>
+     <tr>
+       <td><%= article.title %></td>
+       <td><%= article.text  %></td>
+       <td><%= article.created_at%></td>
+       <td><%= link_to 'Show', article_path(article)%></td>
+     </tr>
+    <%end%>
+   </table>
+
+  </body>
+</html>
