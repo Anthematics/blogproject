@@ -5,6 +5,8 @@ Rails.application.routes.draw do
     resources :comments
   end
 
+  resources :about
+
   root 'welcome#index'
 
   get '/articles/:id'=> 'articles#show'
